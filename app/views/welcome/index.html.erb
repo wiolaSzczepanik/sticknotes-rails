@@ -3,6 +3,6 @@
 <%= link_to "All posts", entries_path %>
 
 <h2><%= @entries.title%></h2>
-<h5>Date of posts <%= @entries.date.strftime('%d-%m-%Y')%></h5>
+<h5>Date of posts <%= @entries.date&.strftime('%d-%m-%Y')%></h5>
 <h4><%=truncate(@entries.contents, length: 200)%> </h4>
 <p>Copyrigth WS, <%= @actual_year%></p>
