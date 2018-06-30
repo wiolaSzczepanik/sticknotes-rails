@@ -1,0 +1,6 @@
+<p>Post title: <%= @entry.title%> </p>
+<p><%= @entry.date%> </p>
+<p><%= @entry.contents%> </p>
+<%= link_to "Edit post", edit_entry_path(@entry) %>
+<%= link_to "Back to posts", entries_path %>
+<%= link_to "Delete post", entry_path(@entry), method: :delete, data: { confirm: 'Are you sure?' } %>

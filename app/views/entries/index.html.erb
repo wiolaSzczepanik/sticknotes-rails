@@ -1,0 +1,12 @@
+<h1>All posts</h1>
+<%= link_to "Main page", root_path %>
+<br>
+<%= link_to "New post", new_entry_path %>
+
+<% @entries.each do |entry| %>
+	<p><%= entry.title%> </p>
+	<p><%= entry.date%> </p>
+	<p><%= truncate(entry.contents, legth: 100) %> </p>
+	<%= link_to "Read more", entry_path(entry) %>
+
+<% end %>
